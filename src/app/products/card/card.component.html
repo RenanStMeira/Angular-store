@@ -1,17 +1,17 @@
 <div class="card">
     <a class="card-image">
-        <img src="product.name" alt="product name">
+        <img [src]="product.image" alt="{{ product.name }}">
     </a>
 
     <div class="card-content">
         <h3 class="card-category">
-            Product Category
+            {{ product.category }}
         </h3>
         <h2 class="card-name">
-            <a href="#">Product Name</a>
+            <a href="#">{{ product.name }}</a>
         </h2>
         <div class="card-footer">
-            <p class="card-price">Product Price</p>
+            <p class="card-price">{{ product.price }}</p>
             <button class="card-button">
                 Add to cart
             </button>
