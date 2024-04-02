@@ -6,7 +6,6 @@ import { Product } from 'models/product.interface';
 @Component({
   selector: 'app-product-list',
   templateUrl: './datails.component.html',
-  // styleUrls: ['./products-list.component.scss']
 })
 
 export class ProductListComponent implements OnInit {

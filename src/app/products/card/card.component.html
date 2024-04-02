@@ -1,20 +1,22 @@
-<div class="card">
-    <a class="card-image">
-        <img [src]="product.image" alt="{{ product.name }}">
-    </a>
+<section class="product-grid">
+    <div class="card">
+        <a class="card-image">
+            <img [src]="product.image" alt="{{ product.name }}">
+        </a>
 
-    <div class="card-content">
-        <h3 class="card-category">
-            {{ product.category }}
-        </h3>
-        <h2 class="card-name">
-            <a href="#">{{ product.name }}</a>
-        </h2>
-        <div class="card-footer">
-            <p class="card-price">{{ product.price }}</p>
-            <button class="card-button">
-                Add to cart
-            </button>
+        <div class="card-content">
+            <h3 class="card-category">
+                {{ product.category }}
+            </h3>
+            <h2 class="card-name">
+                <a href="#">{{ product.name }}</a>
+            </h2>
+            <div>
+                <p class="card-price">{{ product.price }}</p>
+                <button class="card-button">
+                    Add to cart
+                </button>
+            </div>
         </div>
     </div>
-</div>
+</section>
