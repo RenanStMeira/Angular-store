@@ -4,7 +4,6 @@ import { ProductService } from 'api/products.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   private readonly productSvc = inject(ProductService);

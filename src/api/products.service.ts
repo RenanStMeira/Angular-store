@@ -1,27 +1,24 @@
 import { HttpClient } from "@angular/common/http";
-import { Injectable, signal } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { environment } from "@envs/environment.development";
 import { Product } from "models/product.interface";
-import { Observable } from "rxjs";
-import { tap } from 'rxjs/operators';
+import { Observable, BehaviorSubject } from "rxjs";
 
 @Injectable({providedIn: 'root'})
 export class ProductService {
-    public products = signal<Product[]>([]);
+    public products: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
 
     private readonly _endPoint = environment.apiURL;
 
     constructor(private _http: HttpClient) {
-        this.getProducts();
+        this.getProducts().subscribe(products => this.products.next(products));
     }
 
     public getProducts(): Observable<Product[]> {
-        return this._http
-          .get<Product[]>(`${this._endPoint}/products/?sort=desc`)
-          .pipe(tap((data: Product[]) => this.products.set(data)));
-      }
+        return this._http.get<Product[]>(`${this._endPoint}/products/?sort=desc`);
+    }
 
-    public getProductcById(id: number) {
+    public getProductById(id: number): Observable<Product> {
         return this._http.get<Product>(`${this._endPoint}/products/${id}`);
     }
 }

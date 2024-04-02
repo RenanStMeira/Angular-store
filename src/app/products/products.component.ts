@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductService } from 'api/products.service';
 import { Product } from 'models/product.interface';
 
@@ -19,7 +20,7 @@ import { Product } from 'models/product.interface';
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit() {
     this.productService.getProducts().subscribe(products => {
@@ -28,6 +29,6 @@ export class ProductsComponent implements OnInit {
   }
 
   onProductClick(product: Product) {
-    console.log(product);
+    this.router.navigate(['/product', product.id]);
   }
 }
