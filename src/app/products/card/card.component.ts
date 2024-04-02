@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -7,4 +8,12 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input() product: any;
+  @Output() productClick = new EventEmitter<void>();
+
+  constructor(private router: Router) { }
+
+  onProductClick() {
+    this.productClick.emit();
+    this.router.navigate(['/product', this.product.id]);
+  }
 }

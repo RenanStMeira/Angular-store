@@ -9,7 +9,7 @@ import { Product } from 'models/product.interface';
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap -m-4">
 
-      <app-card *ngFor="let product of products" [product]="product" class="w-full p-4 lg:w1/4 md:w-1/2"></app-card>
+      <app-card *ngFor="let product of products" [product]="product" (productClick)="onProductClick(product)" class="w-full p-4 lg:w1/4 md:w-1/2"></app-card>
 
     </div>
   </div>
@@ -25,5 +25,9 @@ export class ProductsComponent implements OnInit {
     this.productService.getProducts().subscribe(products => {
       this.products = products;
     });
+  }
+
+  onProductClick(product: Product) {
+    console.log(product);
   }
 }
