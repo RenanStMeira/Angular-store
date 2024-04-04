@@ -18,7 +18,11 @@ export class UsersService {
         return this._http.get<User[]>(`${this._endPoint}/products/?sort=desc`);
     }
 
-    public postCreateUser(user: User): Observable<any> {
-        return this._http.post<any>(`${this._endPoint}/users`, user);
+    public postCreateUser(user: User): Observable<User> {
+        return this._http.post<User>(`${this._endPoint}/users`, user);
+    }
+
+    public login(username: string, password: string): Observable<any> {
+        return this._http.post<any>(`${this._endPoint}/auth/login`, { username, password });
     }
 }
