@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductDetailsComponent } from './components/products/datails/datails.component';
-import { FormComponent } from './components/form/form.component';
+import { FormComponent } from './components/account/form.component';
 
 const routes: Routes = [
   { path: 'home', component: ProductsComponent },

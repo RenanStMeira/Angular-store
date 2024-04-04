@@ -11,8 +11,9 @@ import { ProductDetailsComponent } from './components/products/datails/datails.c
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormComponent } from './components/form/form.component';
+import { FormComponent } from './components/account/form.component';
 import { FormsModule } from '@angular/forms';
+import { AccountComponent } from './pages/account/account.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     FormComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,

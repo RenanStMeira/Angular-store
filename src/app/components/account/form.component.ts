@@ -1,5 +1,5 @@
 import { NgForm } from '@angular/forms';
-import { UsersService } from './../../../api/users.service';
+import { UsersService } from '../../../api/users.service';
 import { Component } from '@angular/core';
 
 @Component({
