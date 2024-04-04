@@ -1,24 +1,22 @@
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    width: 100%;
+    margin-bottom: 150px;
 }
-
 .card {
     padding: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    overflow: hidden;
     border-radius: 0.5rem;
     box-shadow: none;
     transition: box-shadow 0.3s ease-in-out;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
-    background-color: rgb(223, 218, 218);
+    background-color: rgb(171, 171, 175);
     align-items: center;
+    max-height: 60vh;
+    gap: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .card:hover {
@@ -49,7 +47,7 @@
 .card-category {
     margin-bottom: 0.25rem;
     text-transform: uppercase;
-    color: gray;
+    color: rgb(0, 0, 0);
     font-size: 0.75rem;
     letter-spacing: 0.1em;
 }
@@ -63,7 +61,7 @@
 }
 
 .card-price {
-    color: orange;
+    color: #fff;
     font-size: 2rem;
     font-weight: bold;
     align-items: center;
@@ -72,7 +70,7 @@
 
 .card-button {
     padding: 0.5rem 1rem;
-    background-color: orange;
+    background-color: rgb(10,43,250);
     color: white;
     border: none;
     border-radius: 0.25rem;
@@ -82,5 +80,5 @@
 }
 
 .card-button:hover {
-    background-color: darkorange;
+    background-color: rgb(10,43,250);
 }

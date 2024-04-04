@@ -1,20 +1,19 @@
-<section class="product-section" *ngFor="let product of products">
-    <div class="container">
-      <div class="product-wrap">
-        <img alt="{{ product?.title }}" class="product-image" [src]="product?.image">
-        <div class="product-details">
-          <h2 class="product-category">{{ product?.category }}</h2>
-          <h1 class="product-title">{{ product?.title }}</h1>
-          <div class="reviews">
-            <span class="review-count">365 reviews</span>
-          </div>
-          <p class="product-description">{{ product?.description }}</p>
-  
-          <div class="product-actions">
-            <span class="product-price">{{ product?.price }}</span>
-            <button class="add-to-cart-button">Add to cart</button>
-          </div>
+<section class="product-section">
+  <div class="container">
+    <div class="product-wrap" *ngFor="let product of products">
+      <img alt="{{ product?.title }}" class="product-image" [src]="product?.image">
+      <div class="product-details">
+        <h2 class="product-category">{{ product?.category }}</h2>
+        <h1 class="product-title">{{ product?.title }}</h1>
+        <div class="reviews">
+          <span class="review-count">365 reviews</span>
+        </div>
+        <p class="product-description">{{ product?.description }}</p>
+        <div class="product-actions">
+          <span class="product-price">{{ product?.price }}</span>
+          <button class="add-to-cart-button">Comprar</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
