@@ -18,6 +18,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { UsersService } from 'api/users.service';
 import { AuthComponentPage } from './pages/auth/auth-page.component';
 import { AllproductsComponent } from './components/allProducts/allproducts.component';
+import { ProductsPageComponent } from './pages/products/products-page.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AllproductsComponent } from './components/allProducts/allproducts.compo
     AuthComponent,
     AuthComponentPage,
     AllproductsComponent,
+    ProductsPageComponent,
   ],
   imports: [
     BrowserModule,
