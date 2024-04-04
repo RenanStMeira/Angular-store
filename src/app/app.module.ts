@@ -17,6 +17,7 @@ import { AccountComponent } from './pages/account/account.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { UsersService } from 'api/users.service';
 import { AuthComponentPage } from './pages/auth/auth-page.component';
+import { AllproductsComponent } from './components/allProducts/allproducts.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AuthComponentPage } from './pages/auth/auth-page.component';
     AccountComponent,
     AuthComponent,
     AuthComponentPage,
+    AllproductsComponent,
   ],
   imports: [
     BrowserModule,
