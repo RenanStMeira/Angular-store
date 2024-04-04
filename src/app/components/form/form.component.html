@@ -1,39 +1,31 @@
-<form class="registration-form">
+<form class="registration-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
     <label class="form-label" for="email">Email:</label>
     <input class="form-input" type="email" id="email" name="email" required>
 
     <label class="form-label" for="username">Username:</label>
     <input class="form-input" type="text" id="username" name="username" required>
 
-    <label class="form-label" for="password">Password:</label>
+    <label class="form-label" for="password">Senha:</label>
     <input class="form-input" type="password" id="password" name="password" required>
 
-    <label class="form-label" for="firstname">First Name:</label>
-    <input class="form-input" type="text" id="firstname" name="name[firstname]" required>
+    <label class="form-label" for="name">Nome:</label>
+    <input class="form-input" type="text" id="name" name="name[name]" required>
 
-    <label class="form-label" for="lastname">Last Name:</label>
-    <input class="form-input" type="text" id="lastname" name="name[lastname]" required>
 
-    <label class="form-label" for="city">City:</label>
+    <label class="form-label" for="city">Cidade:</label>
     <input class="form-input" type="text" id="city" name="address[city]" required>
 
-    <label class="form-label" for="street">Street:</label>
+    <label class="form-label" for="street">Rua:</label>
     <input class="form-input" type="text" id="street" name="address[street]" required>
 
-    <label class="form-label" for="number">Number:</label>
-    <input class="form-input" type="number" id="number" name="address[number]" required>
+    <label class="form-label" for="number">Numero:</label>
+    <input class="form-input" type="number" id="numbere aqui no forms esta assim " name="address[number]" required>
 
-    <label class="form-label" for="zipcode">Zip Code:</label>
+    <label class="form-label" for="zipcode">CEP:</label>
     <input class="form-input" type="text" id="zipcode" name="address[zipcode]" required>
 
-    <label class="form-label" for="lat">Latitude:</label>
-    <input class="form-input" type="text" id="lat" name="address[geolocation][lat]" required>
-
-    <label class="form-label" for="long">Longitude:</label>
-    <input class="form-input" type="text" id="long" name="address[geolocation][long]" required>
-
-    <label class="form-label" for="phone">Phone:</label>
+    <label class="form-label" for="phone">Telefone:</label>
     <input class="form-input" type="tel" id="phone" name="phone" required>
 
-    <button class="form-button" type="submit">Register</button>
+    <button class="form-button" type="submit">Cadastrar</button>
 </form>

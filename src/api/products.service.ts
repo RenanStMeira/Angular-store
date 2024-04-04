@@ -2,7 +2,6 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { environment } from "@envs/environment.development";
 import { Product } from "models/product.interface";
-import { User } from "models/users.interface";
 import { Observable, BehaviorSubject } from "rxjs";
 
 @Injectable({providedIn: 'root'})
@@ -21,9 +20,5 @@ export class ProductService {
 
     public getProductById(id: number): Observable<Product> {
         return this._http.get<Product>(`${this._endPoint}/products/${id}`);
-    }
-
-    public postCreateUser(user: User): Observable<any> {
-        return this._http.post<any>(`${this._endPoint}/users`, user);
     }
 }
