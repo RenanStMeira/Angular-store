@@ -14,6 +14,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/account/form.component';
 import { FormsModule } from '@angular/forms';
 import { AccountComponent } from './pages/account/account.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { UsersService } from 'api/users.service';
+import { AuthComponentPage } from './pages/auth/auth-page.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { AccountComponent } from './pages/account/account.component';
     FooterComponent,
     FormComponent,
     AccountComponent,
+    AuthComponent,
+    AuthComponentPage,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,7 @@ import { AccountComponent } from './pages/account/account.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

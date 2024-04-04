@@ -12,6 +12,7 @@ export class FormComponent {
 
   onSubmit(form: NgForm) {
     this.UsersService.postCreateUser(form.value).subscribe(response => {
+      console.info('Usuário criado com sucesso!', response);
       form.reset();
     })
   }
