@@ -16,8 +16,7 @@
   }
   
   .product-image {
-    flex: 1 0 50%;
-    max-width: 50%;
+    width: 450px;
   }
   
   .product-details {
@@ -32,7 +31,8 @@
   }
   
   .product-title {
-    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #333;
     margin: 10px 0;
   }
@@ -59,7 +59,8 @@
   }
   
   .product-price {
-    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #333;
   }
   

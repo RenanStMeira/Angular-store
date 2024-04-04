@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductsComponent } from './products/products.component';
-import { ProductDetailsComponent } from './products/datails/datails.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductDetailsComponent } from './components/products/datails/datails.component';
 
 const routes: Routes = [
+  { path: 'home', component: ProductsComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'product/:id', component: ProductDetailsComponent },
   { path: '', redirectTo: 'products', pathMatch: 'full' },
