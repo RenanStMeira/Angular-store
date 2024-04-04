@@ -15,5 +15,4 @@ export class FormComponent {
       form.reset();
     })
   }
-  
 }
