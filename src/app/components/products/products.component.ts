@@ -22,8 +22,14 @@ export class ProductsComponent implements OnInit {
 
   constructor(private productService: ProductService, private router: Router) { }
 
+  // ngOnInit() {
+  //   this.productService.getProducts().subscribe(products => {
+  //     this.products = products;
+  //   });
+  // }
+
   ngOnInit() {
-    this.productService.getProducts().subscribe(products => {
+    this.productService.getProductsLimit5().subscribe(products => {
       this.products = products;
     });
   }

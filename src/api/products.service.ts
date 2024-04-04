@@ -21,4 +21,8 @@ export class ProductService {
     public getProductById(id: number): Observable<Product> {
         return this._http.get<Product>(`${this._endPoint}/products/${id}`);
     }
+
+    public getProductsLimit5(): Observable<Product[]> {
+        return this._http.get<Product[]>(`${this._endPoint}/products?limit=5`);
+    }
 }
