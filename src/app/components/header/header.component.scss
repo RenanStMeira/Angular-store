@@ -1,10 +1,22 @@
+$font-size-links: 22px;
+$border-style: solid 1px;
+$border-radius: 10px;
+$padding: 5px;
+$color-white: white;
+$color-link: #007BFF;
+$color-link-hover: #0056b3;
+$header-height: 90px;
+$button-height: 30px;
+
 .container {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: $padding;
     background: rgba(40, 68, 252, 0.473);
     background: linear-gradient(90deg, rgba(10, 42, 250, 0.562) 2%, rgba(15, 15, 221, 0.5) 50%, rgba(10,43,250,1) 83%);
     font-style: italic;
+    margin: 0 auto; 
+    height: $header-height;
 }
 
 .container__image img {
@@ -14,27 +26,45 @@
 
 .container__links {
     display: flex;
-    gap: 10px;
-    font-size: 22px;
+    font-size: $font-size-links;
     cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.link {
+    text-decoration: none;
+    color: $color-white;
+    padding: $padding;
+    transition: background-color 0.3s;
+    height: $button-height;
+    font-weight: bold;
+}
+
+.container__login {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    margin-top: $padding;
+    border: $border-style;
+    font-size: 20px;
+    padding: 5px;
+    color: $color-white;
+    font-style: italic;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 10px;
 }
 
 a {
-    border: solid 1px;
-    border-radius: 10px;
-}
+    margin-left: 20px;
 
-.container__links a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-}
-.btn {
-    margin-top: 10px;
-    border: solid 1px;
-    font-size: 25px;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-    font-style: italic;
+    
+    &:hover {
+        font-size: 20px;
+        background-color: $color-link-hover;
+    }
 }
